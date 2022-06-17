@@ -1,7 +1,7 @@
 # coding:utf-8
-from PyQt5.QtCore import QPointF, QSize, Qt
-from PyQt5.QtGui import QColor, QIcon, QPainter, QPainterPath, QPen
-from PyQt5.QtWidgets import QToolButton
+from PySide6.QtCore import QPointF, QSize, Qt
+from PySide6.QtGui import QColor, QIcon, QPainter, QPainterPath, QPen
+from PySide6.QtWidgets import QToolButton
 
 from ..rc import resource
 

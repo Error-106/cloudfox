@@ -7,10 +7,10 @@ from platform import platform
 import win32api
 import win32con
 import win32gui
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QCloseEvent, QCursor
-from PyQt5.QtWidgets import QApplication, QWidget
-from PyQt5.QtWinExtras import QtWin
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QCloseEvent, QCursor
+from PySide6.QtWidgets import QApplication, QWidget
+#from PyQt5.QtWinExtras import QtWin
 
 from ..titlebar import TitleBar
 from .c_structures import MINMAXINFO, NCCALCSIZE_PARAMS
@@ -162,7 +162,7 @@ class AcrylicWindow(WindowsFramelessWindow):
         super().__init__(parent=parent)
         self.__closedByKey = False
 
-        QtWin.enableBlurBehindWindow(self)
+        #QtWin.enableBlurBehindWindow(self)
         self.setWindowFlags(Qt.FramelessWindowHint |
                             Qt.WindowMinMaxButtonsHint)
         self.windowEffect.addWindowAnimation(self.winId())
