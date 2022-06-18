@@ -16,7 +16,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
-    QPushButton, QSizePolicy, QSpacerItem, QWidget)
+    QPushButton, QSizePolicy, QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -30,15 +30,6 @@ class Ui_Form(object):
         Form.setSizePolicy(sizePolicy)
         self.gridLayout = QGridLayout(Form)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.horizontalSpacer = QSpacerItem(0, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.gridLayout.addItem(self.horizontalSpacer, 2, 1, 1, 1)
-
-        self.lineEdit = QLineEdit(Form)
-        self.lineEdit.setObjectName(u"lineEdit")
-
-        self.gridLayout.addWidget(self.lineEdit, 1, 1, 1, 3)
-
         self.user_label = QLabel(Form)
         self.user_label.setObjectName(u"user_label")
         sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
@@ -55,15 +46,7 @@ class Ui_Form(object):
         self.login_lineEdit = QLineEdit(Form)
         self.login_lineEdit.setObjectName(u"login_lineEdit")
 
-        self.gridLayout.addWidget(self.login_lineEdit, 0, 1, 1, 3)
-
-        self.login_pushButton = QPushButton(Form)
-        self.login_pushButton.setObjectName(u"login_pushButton")
-        sizePolicy.setHeightForWidth(self.login_pushButton.sizePolicy().hasHeightForWidth())
-        self.login_pushButton.setSizePolicy(sizePolicy)
-        self.login_pushButton.setMinimumSize(QSize(85, 25))
-
-        self.gridLayout.addWidget(self.login_pushButton, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.login_lineEdit, 0, 1, 1, 2)
 
         self.password_label = QLabel(Form)
         self.password_label.setObjectName(u"password_label")
@@ -73,13 +56,18 @@ class Ui_Form(object):
 
         self.gridLayout.addWidget(self.password_label, 1, 0, 1, 1)
 
-        self.login_in_later_pushButton = QPushButton(Form)
-        self.login_in_later_pushButton.setObjectName(u"login_in_later_pushButton")
-        sizePolicy.setHeightForWidth(self.login_in_later_pushButton.sizePolicy().hasHeightForWidth())
-        self.login_in_later_pushButton.setSizePolicy(sizePolicy)
-        self.login_in_later_pushButton.setMinimumSize(QSize(85, 25))
+        self.lineEdit = QLineEdit(Form)
+        self.lineEdit.setObjectName(u"lineEdit")
 
-        self.gridLayout.addWidget(self.login_in_later_pushButton, 2, 3, 1, 1)
+        self.gridLayout.addWidget(self.lineEdit, 1, 1, 1, 2)
+
+        self.login_pushButton = QPushButton(Form)
+        self.login_pushButton.setObjectName(u"login_pushButton")
+        sizePolicy.setHeightForWidth(self.login_pushButton.sizePolicy().hasHeightForWidth())
+        self.login_pushButton.setSizePolicy(sizePolicy)
+        self.login_pushButton.setMinimumSize(QSize(85, 25))
+
+        self.gridLayout.addWidget(self.login_pushButton, 2, 0, 1, 1)
 
         self.reg_pushButton = QPushButton(Form)
         self.reg_pushButton.setObjectName(u"reg_pushButton")
@@ -87,7 +75,15 @@ class Ui_Form(object):
         self.reg_pushButton.setSizePolicy(sizePolicy)
         self.reg_pushButton.setMinimumSize(QSize(85, 25))
 
-        self.gridLayout.addWidget(self.reg_pushButton, 2, 2, 1, 1)
+        self.gridLayout.addWidget(self.reg_pushButton, 2, 1, 1, 1)
+
+        self.login_in_later_pushButton = QPushButton(Form)
+        self.login_in_later_pushButton.setObjectName(u"login_in_later_pushButton")
+        sizePolicy.setHeightForWidth(self.login_in_later_pushButton.sizePolicy().hasHeightForWidth())
+        self.login_in_later_pushButton.setSizePolicy(sizePolicy)
+        self.login_in_later_pushButton.setMinimumSize(QSize(85, 25))
+
+        self.gridLayout.addWidget(self.login_in_later_pushButton, 2, 2, 1, 1)
 
 #if QT_CONFIG(shortcut)
         self.user_label.setBuddy(self.login_lineEdit)
@@ -102,9 +98,9 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.user_label.setText(QCoreApplication.translate("Form", u"&user", None))
-        self.login_pushButton.setText(QCoreApplication.translate("Form", u"Login now", None))
         self.password_label.setText(QCoreApplication.translate("Form", u"&passsword", None))
-        self.login_in_later_pushButton.setText(QCoreApplication.translate("Form", u"Login in later", None))
+        self.login_pushButton.setText(QCoreApplication.translate("Form", u"Login now", None))
         self.reg_pushButton.setText(QCoreApplication.translate("Form", u"PushButton", None))
+        self.login_in_later_pushButton.setText(QCoreApplication.translate("Form", u"Login in later", None))
     # retranslateUi
 

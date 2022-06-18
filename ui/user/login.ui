@@ -20,22 +20,6 @@
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="2" column="1">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>0</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="1" colspan="3">
-    <widget class="QLineEdit" name="lineEdit"/>
-   </item>
    <item row="0" column="0">
     <widget class="QLabel" name="user_label">
      <property name="sizePolicy">
@@ -67,27 +51,8 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="1" colspan="3">
+   <item row="0" column="1" colspan="2">
     <widget class="QLineEdit" name="login_lineEdit"/>
-   </item>
-   <item row="2" column="0">
-    <widget class="QPushButton" name="login_pushButton">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>85</width>
-       <height>25</height>
-      </size>
-     </property>
-     <property name="text">
-      <string>Login now</string>
-     </property>
-    </widget>
    </item>
    <item row="1" column="0">
     <widget class="QLabel" name="password_label">
@@ -114,8 +79,11 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="3">
-    <widget class="QPushButton" name="login_in_later_pushButton">
+   <item row="1" column="1" colspan="2">
+    <widget class="QLineEdit" name="lineEdit"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QPushButton" name="login_pushButton">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
        <horstretch>0</horstretch>
@@ -129,11 +97,11 @@
       </size>
      </property>
      <property name="text">
-      <string>Login in later</string>
+      <string>Login now</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="2">
+   <item row="2" column="1">
     <widget class="QPushButton" name="reg_pushButton">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -149,6 +117,25 @@
      </property>
      <property name="text">
       <string>PushButton</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QPushButton" name="login_in_later_pushButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>85</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Login in later</string>
      </property>
     </widget>
    </item>
