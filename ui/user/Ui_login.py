@@ -56,10 +56,10 @@ class Ui_Form(object):
 
         self.gridLayout.addWidget(self.password_label, 1, 0, 1, 1)
 
-        self.lineEdit = QLineEdit(Form)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.password_lineEdit = QLineEdit(Form)
+        self.password_lineEdit.setObjectName(u"password_lineEdit")
 
-        self.gridLayout.addWidget(self.lineEdit, 1, 1, 1, 2)
+        self.gridLayout.addWidget(self.password_lineEdit, 1, 1, 1, 2)
 
         self.login_pushButton = QPushButton(Form)
         self.login_pushButton.setObjectName(u"login_pushButton")
@@ -87,7 +87,7 @@ class Ui_Form(object):
 
 #if QT_CONFIG(shortcut)
         self.user_label.setBuddy(self.login_lineEdit)
-        self.password_label.setBuddy(self.lineEdit)
+        self.password_label.setBuddy(self.password_lineEdit)
 #endif // QT_CONFIG(shortcut)
 
         self.retranslateUi(Form)
@@ -97,10 +97,10 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.user_label.setText(QCoreApplication.translate("Form", u"&user", None))
-        self.password_label.setText(QCoreApplication.translate("Form", u"&passsword", None))
-        self.login_pushButton.setText(QCoreApplication.translate("Form", u"Login now", None))
-        self.reg_pushButton.setText(QCoreApplication.translate("Form", u"PushButton", None))
-        self.login_in_later_pushButton.setText(QCoreApplication.translate("Form", u"Login in later", None))
+        self.user_label.setText(QCoreApplication.translate("Form", u"\u7528\u6237\u540d", None))
+        self.password_label.setText(QCoreApplication.translate("Form", u"\u5bc6\u7801", None))
+        self.login_pushButton.setText(QCoreApplication.translate("Form", u"\u73b0\u5728\u767b\u5f55", None))
+        self.reg_pushButton.setText(QCoreApplication.translate("Form", u"\u6ce8\u518c", None))
+        self.login_in_later_pushButton.setText(QCoreApplication.translate("Form", u"\u7a0d\u540e\u767b\u5f55", None))
     # retranslateUi
 
