@@ -17,11 +17,9 @@ class mainwindow(Ui_MainWindow,QtWidgets.QMainWindow):
         self.child.login_in_later_pushButton.clicked.connect(self.close)
         self.child.show()
     def mouseMoveEvent(self, event):
-        if not 0 < event.pos().x() < self.width() - 46 * 3:
-            return
+        if not 0 < event.pos().x() < self.width() - 46 * 3:return
         ReleaseCapture()
-        SendMessage(self.window().winId(), win32con.WM_SYSCOMMAND,
-                    win32con.SC_MOVE + win32con.HTCAPTION, 0)
+        SendMessage(self.window().winId(), win32con.WM_SYSCOMMAND,win32con.SC_MOVE + win32con.HTCAPTION, 0)
         event.ignore()
     #loginwindow
     class loginwindow(Ui_login_and_reg.Ui_Form,QtWidgets.QWidget):
