@@ -1,1 +1,1 @@
-from .ui import ui_rc
+from .user import ui_rc

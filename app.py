@@ -2,6 +2,7 @@ import api
 import ui
 import sys
 app=ui.user.QtWidgets.QApplication(sys.argv)
-window=ui.user.mainwindow()
-window.show()
+userwindow=ui.user.mainwindow()
+userwindow.setWindowIcon(ui.resource.ui_rc)
+userwindow.show()
 sys.exit(app.exec())
