@@ -1,5 +1,6 @@
 <RCC>
-  <qresource prefix="text">
+  <qresource prefix="test">
+    <file>test.ico</file>
     <file>test.png</file>
   </qresource>
 </RCC>
