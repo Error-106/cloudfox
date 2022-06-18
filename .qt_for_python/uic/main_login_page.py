@@ -35,7 +35,6 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(1)
         sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
         self.label.setSizePolicy(sizePolicy)
-        self.label.setPixmap(QPixmap(u":/text/test.png"))
 
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
 

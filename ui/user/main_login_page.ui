@@ -26,9 +26,6 @@
       <property name="text">
        <string/>
       </property>
-      <property name="pixmap">
-       <pixmap resource="ui.qrc">:/text/test.png</pixmap>
-      </property>
      </widget>
     </item>
    </layout>
