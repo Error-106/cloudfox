@@ -1,14 +1,16 @@
 import sys
-import PySide6
+from PySide6 import QtWidgets
+from PySide6 import QtCore
+from PySide6 import QtGui
 from user import login
 
-class mainwindows(PySide6.QtWidgets,login.Ui_Form):
+class mainwindows(login.Ui_Form,QtWidgets.QMainWindow):
     def __init__(self):
-        super().__init__()
-        self.setupUi(PySide6.QtWidgets)
+        super(mainwindows,self).__init__()
+        self.setupUi(self)
 
 if __name__=="__main__":
-    app=PySide6.QtWidgets.QApplication(sys.argv)
+    app=QtWidgets.QApplication(sys.argv)
     window=mainwindows()
     window.show()
     sys.exit(app.exec())
