@@ -12,8 +12,6 @@ class mainwindow(Ui_MainWindow,QtWidgets.QMainWindow):
         self.child=self.children()
         self.child=self.loginwindow()
         self.gridLayout.addWidget(self.child, 0, 1, 1, 1)
-        #self.child.setVerticalStretch(1)
-        #self.child.setHorizontalStretch(1)
         self.child.login_in_later_pushButton.clicked.connect(self.close)
         self.child.show()
     def mouseMoveEvent(self, event):
