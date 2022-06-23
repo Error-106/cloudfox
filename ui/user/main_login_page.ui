@@ -31,8 +31,6 @@
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="ui.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
