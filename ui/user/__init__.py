@@ -10,7 +10,7 @@ class mainwindow(Ui_MainWindow,QtWidgets.QMainWindow):
         self.setWindowFlags(self.windowFlags() | QtCore.Qt.FramelessWindowHint)
         self.child=self.children()
         self.child=self.loginwindow()
-        self.gridLayout.addWidget(self.child, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.child,0,1)
         self.child.show()
     def mouseMoveEvent(self, event):
         if not 0 < event.pos().x() < self.width() - 46 * 3:return

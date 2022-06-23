@@ -1,6 +1,7 @@
 <RCC>
   <qresource prefix="test">
     <file>test.ico</file>
+    <file>logo.svg</file>
     <file>test.png</file>
   </qresource>
 </RCC>
