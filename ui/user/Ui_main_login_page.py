@@ -15,8 +15,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QMainWindow,
-    QSizePolicy, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QGridLayout, QHBoxLayout, QLabel,
+    QMainWindow, QSizePolicy, QVBoxLayout, QWidget)
 from ..resource.user import ui_rc
 
 class Ui_MainWindow(object):
@@ -35,23 +35,38 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.verticalLayout_2 = QVBoxLayout()
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout = QVBoxLayout()
+        self.verticalLayout.setObjectName(u"verticalLayout")
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
+
+        self.verticalLayout.addWidget(self.label)
+
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.showlabel_1 = QLabel(self.centralwidget)
+        self.showlabel_1.setObjectName(u"showlabel_1")
         sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy1.setHorizontalStretch(1)
         sizePolicy1.setVerticalStretch(1)
-        sizePolicy1.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
-        self.label.setSizePolicy(sizePolicy1)
-        self.label.setMaximumSize(QSize(250, 82))
-        self.label.setPixmap(QPixmap(u":/test/logo.svg"))
-        self.label.setScaledContents(True)
+        sizePolicy1.setHeightForWidth(self.showlabel_1.sizePolicy().hasHeightForWidth())
+        self.showlabel_1.setSizePolicy(sizePolicy1)
+        self.showlabel_1.setMaximumSize(QSize(250, 82))
+        self.showlabel_1.setPixmap(QPixmap(u":/test/logo.svg"))
+        self.showlabel_1.setScaledContents(True)
 
-        self.verticalLayout_2.addWidget(self.label)
+        self.horizontalLayout.addWidget(self.showlabel_1)
+
+        self.showlabel_2 = QLabel(self.centralwidget)
+        self.showlabel_2.setObjectName(u"showlabel_2")
+
+        self.horizontalLayout.addWidget(self.showlabel_2)
 
 
-        self.gridLayout.addLayout(self.verticalLayout_2, 0, 0, 1, 1)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+
+
+        self.gridLayout.addLayout(self.verticalLayout, 0, 0, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -63,5 +78,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"LoginMainWindow", None))
         self.label.setText("")
+        self.showlabel_1.setText("")
+        self.showlabel_2.setText("")
     # retranslateUi
 
