@@ -1,6 +1,6 @@
 import ui
 import sys
-app=ui.uis.user.QtWidgets.QApplication(sys.argv)
+app=ui.uis.userlogin.QtWidgets.QApplication(sys.argv)
 userwindow=ui.login()
 
 userwindow.show()

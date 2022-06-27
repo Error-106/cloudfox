@@ -4,7 +4,7 @@ import sys
 import ctypes
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
 
-class login(uis.user.mainloginwindow):
+class login(uis.userlogin.mainloginwindow):
     def __init__(self) -> None:
         super().__init__()
         from uis.resource.user import ui_rc
