@@ -39,6 +39,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
+        self.label.setScaledContents(True)
 
         self.verticalLayout.addWidget(self.label)
 
@@ -59,6 +60,7 @@ class Ui_MainWindow(object):
 
         self.showlabel_2 = QLabel(self.centralwidget)
         self.showlabel_2.setObjectName(u"showlabel_2")
+        self.showlabel_2.setScaledContents(True)
 
         self.horizontalLayout.addWidget(self.showlabel_2)
 

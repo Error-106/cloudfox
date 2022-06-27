@@ -3,7 +3,7 @@ from .login_and_reg_ui import *
 import win32con
 from win32api import SendMessage
 from win32gui import ReleaseCapture
-class mainwindow(Ui_MainWindow,QtWidgets.QMainWindow):
+class mainloginwindow(Ui_MainWindow,QtWidgets.QMainWindow):
     def __init__(self, parent=None) -> None:
         super().__init__(parent)
         self.setupUi(self)
@@ -27,8 +27,3 @@ class mainwindow(Ui_MainWindow,QtWidgets.QMainWindow):
             self.login_lineEdit.setPlaceholderText("你的用户名")
             self.password_lineEdit.setPlaceholderText("你的密码")
             self.password_lineEdit.setEchoMode(QtWidgets.QLineEdit.PasswordEchoOnEdit)
-if __name__=="__main__":
-    app=QtWidgets.QApplication(sys.argv)
-    window=mainwindow()
-    window.show()
-    sys.exit(app.exec())
