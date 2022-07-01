@@ -22,7 +22,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(398, 247)
+        Form.resize(398, 172)
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -132,10 +132,10 @@ class Ui_Form(object):
 
         self.gridLayout.addWidget(self.inv_lineEdit, 4, 1, 1, 2)
 
-        self.pixverify_label = QLabel(Form)
-        self.pixverify_label.setObjectName(u"pixverify_label")
+        self.text_pixverify_label_2 = QLabel(Form)
+        self.text_pixverify_label_2.setObjectName(u"text_pixverify_label_2")
 
-        self.gridLayout.addWidget(self.pixverify_label, 5, 1, 1, 2)
+        self.gridLayout.addWidget(self.text_pixverify_label_2, 5, 1, 1, 2)
 
         self.text_inf_label = QLabel(Form)
         self.text_inf_label.setObjectName(u"text_inf_label")
@@ -163,7 +163,7 @@ class Ui_Form(object):
         self.login_pushButton.setText(QCoreApplication.translate("Form", u"\u73b0\u5728\u767b\u5f55", None))
         self.text_inv_label.setText(QCoreApplication.translate("Form", u"\u9080\u8bf7\u7801", None))
         self.login_in_later_pushButton.setText(QCoreApplication.translate("Form", u"\u7a0d\u540e\u767b\u5f55", None))
-        self.pixverify_label.setText("")
+        self.text_pixverify_label_2.setText("")
         self.text_inf_label.setText("")
     # retranslateUi
 
