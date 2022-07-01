@@ -6,7 +6,7 @@ ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("myappid")
 
 class login(uis.userlogin.mainloginwindow):
     def __init__(self) -> None:
-        self.uisid=0
+        self.uisid=True
         super().__init__()
         from uis.resource.user import ui_rc
         self.setWindowIcon(uis.QtGui.QPixmap(u":/test/favicon.ico"))
@@ -17,19 +17,20 @@ class login(uis.userlogin.mainloginwindow):
         self.close()
     def uilogin(self):
         if self.uisid:
-            self.login(self)
+            self.login()
         else:
-            self.reg(self)
+            self.reg()
     def login(self):
         pass
     def reg(self):
         pass
     def uichange(self):
         if self.uisid:
-            self.uisid-=1
+            self.uisid=False
             self.loginsui()
         else:
-            self.uisid+=1
+            assert self.uisid==False
+            self.uisid=True
             self.regsui()
     def loginsui(self):
         pass
