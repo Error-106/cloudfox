@@ -1,7 +1,7 @@
-import ui
+import connect
 import sys
-app=ui.uis.userlogin.QtWidgets.QApplication(sys.argv)
-userwindow=ui.login()
+app=connect.uis.userlogin.QtWidgets.QApplication(sys.argv)
+userwindow=connect.login()
 
 userwindow.show()
 sys.exit(app.exec())
